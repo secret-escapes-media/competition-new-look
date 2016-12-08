@@ -23,58 +23,172 @@
 
 // ---------- Section styles ----------
 
-.section {
-  // Fixed background section
-  &--fixed-bg {
-    padding-top: 8em;
-    padding-bottom: 8em;
-    color: $white;
-    background-color: $se-light-grey;
-    background: $se-light-grey center no-repeat;
-    background-image: url('../img/bg/bg.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    p { font-weight: 400; }
-    .page-content &:first-child:before {
-      content: '';
-      display: block;
-      height: 3.375em;
-    }
-  }
-  // Coloured backgrounds
-  &--light-grey-bg {
-    background-color: $light-grey;
-  }
-  &--dark-grey-bg {
-    background-color: $dark-grey;
-    color: $white;
-  }
-  &--black-bg {
-    background-color: $black;
-    color: $white;
-  }
-  &--partner-bg {
-    background-color: $partner-secondary;
-    color: $white;
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 700px;
+  z-index: $z-background;
+  background: $se-dark-grey center no-repeat;
+  background-image: url('../img/bg/bg.jpg');
+  background-size: cover;
+  .flexbox & {
+    height: 80%;
   }
 }
+
+.logos {
+  > * {
+    vertical-align: middle;
+    line-height: 0;
+  }
+}
+
+.logo {
+  padding: 1em;
+  @include bp(medium){
+    padding: 1.25em 1.5em;
+  }
+  @include bp(xxxlarge){
+    padding: 1.5em 2.2em;
+  }
+  & + & {
+    border-left: 1px solid $white-5;
+  }
+}
+
+.intro {
+  height: 600px;
+  padding-top: 100px;
+  color: $white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  .flexbox & {
+    display: flex;
+    justify-content: flex-start;
+    height: 75%;
+    padding-top: 0;
+  }
+}
+
+.page {
+  padding: 2.488em 2em;
+  margin-bottom: 8em;
+  background-color: $white;
+  border-radius: 4px;
+  box-shadow: 0px 0px 42.4px 10.6px rgba(0, 0, 0, 0.1);
+  @include bp(large){
+    padding: 2.488em;
+  }
+  @include bp(xxlarge){
+    padding: 3.9em;
+  }
+}
+
+.lead-paragraph {
+  margin-top: -.45em;
+  margin-bottom: -.45em;
+  font-size: 1.2em;
+  font-weight: 200;
+  line-height: 1.66;
+  @include bp(xxlarge){
+    font-size: 1.467em;
+  }
+}
+
+.pull-quote {
+  font-family: $title-font-family;
+  font-size: 1.8em;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: .02em;
+  @include bp(xxlarge){
+    font-size: 2.25em;
+  }
+}
+
+p {
+  font-weight: 200;
+  @include bp(xxlarge){
+    font-size: 1.2em;
+  }
+}
+
+.form {
+  margin-top: 1.2em;
+  border: solid 1px #e8e6e3;
+  background: #fff url('../img/icons/loading.gif') center no-repeat;
+  background-size: 16px;
+  overflow: hidden;
+}
+
+.footer { font-size: .833em; }
 
 // ---------- button ----------
 
 .btn {
   @include transition;
   display:inline-block;
-  padding: .5em 1.5em;
-  border: 1px solid $se-orange;
+  padding: .33em 1.66em;
+  border: 1px solid $black;
+  border-radius: 4px;
+  background-color: $black;
+  color: $white;
+  font-size: 1.5em;
   font-weight: 500;
-  border-radius: 10em;
+  font-family: $title-font-family;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 42.4px 10.6px $black-5;
   &:hover {
-    color: white;
-    background-color: $se-orange;
     text-decoration: none;
+    transform: scale(1.1);
   }
-  * + & { margin-top: 1em; }
+}
 
-  &--solid { color: white; border: 0; background-color: $se-orange; }
-  &--large { font-size: 1.2em; padding: .5em 3em; }
+
+// ---------- minium height for header ----------
+
+@media (max-height:550px) {
+  .intro,
+  .flexbox .intro {
+    height: 450px;
+    padding-top: 25px;
+  }
+  .background,
+  .flexbox .background {
+    height: 500px;
+  }
+}
+
+
+// ---------- logos ----------
+
+.logo {
+  display: inline-block;
+  &--secret-escapes {
+    margin-top: 4px;
+    &--img {
+      max-width: 80px;
+      @include bp(medium){
+        max-width: 120px;
+      }
+      @include bp(xxxlarge){
+        max-width: 180px;
+      }
+    }
+  }
+  &--partner {
+    &--img {
+      max-width: 120px;
+      @include bp(medium){
+        max-width: 180px;
+      }
+      @include bp(xxxlarge){
+        max-width: 220px;
+      }
+    }
+  }
 }

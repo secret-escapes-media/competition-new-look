@@ -3,9 +3,9 @@
 
 // -------- root typography styles --------
 
-$core-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-$main-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-$title-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+$core-font-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+$main-font-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+$title-font-family: 'Oswald', 'Helvetica Neue', sans-serif;
 
 html { font-size:62.5%; }
 body,
@@ -15,32 +15,38 @@ input, textarea, keygen, select, button {
   @include bp(medium) {
     font-size: 15px;
   }
-  color: $text-paragraph;
+  color: $text-black;
 }
 
 
 // -------- Headings --------
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5 {
+.title {
   font-family: $title-font-family;
-  color: $text-heading;
+  font-weight: 600;
   line-height: 1.2;
-  margin-bottom: .5em;
+  margin-bottom: .25em;
+  text-transform: uppercase;
+  &--main {
+    font-size: 3em;
+    @include bp(large){
+      font-size: 4em;
+    }
+    @include bp(xxxlarge){
+      font-size: 5em;
+    }
+  }
+  &--competition {
+    font-size: 1.2em;
+    font-weight: 400;
+    text-transform: initial;
+    text-align: center;
+    @include bp(xxlarge){
+      font-size: 1.8em;
+    }
+  }
 }
 
-h1, .h1 {
-  font-size: 3.375em;
-  @include bp(medium) {
-    font-size: 4em;
-  }
-  @include bp(large) {
-    font-size: 5.063em;
-  }
-}
 
 h2, .h2 {
   font-size: 2em;
@@ -129,6 +135,9 @@ strong        { font-weight: 800; }
 hr {
   border: 0;
   height: 1px;
-  background-color: $light-grey;
-  margin: 1em 0;
+  background-color: #e8e6e3;
+  margin: 2.25em 0;
+  @include bp(xxlarge){
+    margin: 3.33em 0;
+  }
 }

@@ -16,39 +16,40 @@ $margin: 2em;
 // -------- grid sections --------
 
 section {
-  padding-top: 2.25em;
-  padding-bottom: 2.25em;
+  padding-top: 4em;
+  padding-bottom: 4em;
   @include bp(large) {
-    padding-top: 3.375em;
-    padding-bottom: 3.375em;
+    padding-top: 6.192em;
+    padding-bottom: 6.192em;
   }
 }
 
 .row {
-  @include container( $xxlarge );
+  @include container( $xxxlarge );
   position: relative;
   & + .row { margin-top: $margin; }
+  &--padding {
+    padding-left: ( $margin / 2 );
+    padding-right: ( $margin / 2 );
+    @include bp(medium) {
+      padding-left: $margin;
+      padding-right: $margin;
+    }
+  }
+  &--margin {
+    margin-left: ( $margin / 2 );
+    margin-right: ( $margin / 2 );
+    @include bp(medium) {
+      margin-left: $margin;
+      margin-right: $margin;
+    }
+  }
 }
 
-.row--padding {
-  padding-left: ( $margin / 2 );
-  padding-right: ( $margin / 2 );
-  @include bp(medium) {
-    padding-left: $margin;
-    padding-right: $margin;
-  }
-}
-.row--margin {
-  margin-left: ( $margin / 2 );
-  margin-right: ( $margin / 2 );
-  @include bp(medium) {
-    margin-left: $margin;
-    margin-right: $margin;
-  }
-}
 
 .row__column + .row__column {
   margin-top: ( $margin / 2 );
+  .row--cancel-space & { margin-top: 0; }
   @include bp(large) {
     margin-top: 0;
   }

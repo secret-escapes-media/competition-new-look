@@ -5,31 +5,57 @@ class: overview
 nav-order: 1
 ---
 
-<section class="section--fixed-bg intro site-header__offset text-white">
-  <div class="row row--padding">
-    <h1>{{ page.title }}</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-    <a href="offers.html" class="btn">Offers</a>
-  </div>
-</section>
+<div class="background"></div>
 
-<section>
-  <div class="row row--padding row--columns-4-4-4-gutters">
-    <p class="row__column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-    <p class="row__column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-    <p class="row__column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-  </div>
-  <div class="row row--padding">
-    <a href="#" class="btn">button</a>
-  </div>
-</section>
 
-<section class="section--fixed-bg another">
-  <div class="row row--padding row--columns-4-8-gutters">
-    <p class="row__column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-    <div class="row__column">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
+<div class="intro">
+  <div class="row row--padding">
+    <div class="logos row align-center">
+      <a class="logo logo--secret-escapes" href="https://www.secretescapes.com/"><img class="logo--secret-escapes--img js-svg-swap" src="{{ site.baseurl }}/img/logo/secret-escapes.png" alt="Secret Escapes logo"></a><a class="logo logo--partner"><img class="logo--partner--img" src="{{ site.baseurl }}/img/logo/new-look.png" alt="New Look Logo"></a>
+    </div>
+    <div class="row row--padding">
+      <h1 class="title title--main">Find your perfect winter wonderland in Iceland</h1>
+      <a href="#competition" class="btn btn--solid btn--large">Enter Now</a>
     </div>
   </div>
-</section>
+</div>
+
+<div class="row row--padding">
+  <div class="page">
+    <p class="row lead-paragraph align-center">New Look and Secret Escapes are giving away a Christmas hamper of festive treats, ensuring one lucky winner a holiday spectacular to remember. With a stay at the four star Centerhotel Thingholt, you’ll be treated to contemporary Icelandic design from the lobby to the room. Located in the heart Reykjavik, you’re never far from the unique Icelandic charms of this capital.</p>
+    <hr>
+    <div class="row row--columns-8-4 row--cancel-space">
+      <div class="row__column">
+        <div class="bg-image-ratio bg-image-ratio--3-2" style="background-image: url('{{site.baseurl}}/img/content/hotel-01.jpg');"></div>
+      </div>
+      <div class="row__column">
+        <div class="bg-image-ratio bg-image-ratio--3-2" style="background-image: url('{{site.baseurl}}/img/content/hotel-02.jpg');"></div>
+        <div class="bg-image-ratio bg-image-ratio--3-2" style="background-image: url('{{site.baseurl}}/img/content/new-look.jpg');"></div>
+      </div>
+    </div>
+
+    <div class="row row--columns-5-7-gutters">
+      <div class="row__column">
+        <p class="pull-quote">Win £150 worth of New Look vouchers to style your enchanting escape to Iceland</p>
+      </div>
+      <div class="row__column">
+        <p>Fit right in with this stylish northern location with £150 gift card or products from New Look – before kicking back at the Isafold Spa for much needed relaxation. With a further 10% discount at SKY restaurant, Isafold restaurant or Jorgensen Kitchen and Bar, you’ll have no shortage of exquisite dining options. And don’t worry, with a complimentary Northern Lights wake-up service, you won’t miss the most enchanting spectacle in these parts.</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div id="competition" class="row competition">
+      <h2 class="title title--competition">Submit your details below to be entered into the draw. Good luck!</h2>
+      <div class="form">
+        <iframe src="https://newlook.strutta.me" width="100%" height="750"></iframe>
+      </div>
+    </div>
+
+    <div class="row footer align-center">
+      <p>© Copyright <span class="js-year">2016</span> Secret Escapes</p>
+    </div>
+
+
+  </div>
+</div>

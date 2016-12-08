@@ -1,8 +1,8 @@
 # Site settings
-title: se-microsite-template
+title: newlook
 description: >
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi veniam voluptatibus totam accusantium laborum quo dolore.
-baseurl: "/se-microsite-template" # the subpath of your site, e.g. /blog/
+  New Look and Secret Escapes are giving away a Christmas hamper of festive treats, ensuring one lucky winner a holiday spectacular to remember. With a stay at the four star Centerhotel Thingholt, you’ll be treated to contemporary Icelandic design from the lobby to the room. Located in the heart Reykjavik, you’re never far from the unique Icelandic charms of this capital.
+baseurl: "/newlook" # the subpath of your site, e.g. /blog/
 url: "http://mp.secretescapes.com" # the base hostname & protocol for your site
 
 # Build settings
